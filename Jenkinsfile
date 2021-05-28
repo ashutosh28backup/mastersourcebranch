@@ -25,13 +25,7 @@ node {
         // when running in multi-branch job, one must issue this command
         checkout scm
     }
-	stage('Install NPM Modules') {
-           // cleanWs()
-           // test if sfdx is available and if not, install it.
-            //echo "Installing sfdx-cli"
-		    bat "install @salesforce/sfdx-scanner"  
-        }
-
+	
 
 	
 //	Authorizing SFDX for the environment	

@@ -29,7 +29,7 @@ node {
            // cleanWs()
            // test if sfdx is available and if not, install it.
             //echo "Installing sfdx-cli"
-		   bat "npm install --global sfdx-scanner"  
+		   bat "npm install -g sfdx-source-scanner"  
         }
 
 

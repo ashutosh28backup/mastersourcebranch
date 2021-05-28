@@ -29,7 +29,7 @@ node {
            // cleanWs()
            // test if sfdx is available and if not, install it.
             //echo "Installing sfdx-cli"
-		    bat "plugins:install @salesforce/sfdx-scanner"  
+		    bat "install @salesforce/sfdx-scanner"  
         }
 
 

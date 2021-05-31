@@ -30,7 +30,7 @@ node {
            // cleanWs()
            // test if sfdx is available and if not, install it.
             //echo "Installing sfdx-cli"
-		    bat "\"C:\\Program Files (x86)\\nodejs\\node_modules\\npm "install --global sfdx-scanner" 
+		    bat "\"C:\\Program Files (x86)\\nodejs\\node_modules\\npm\"install --global sfdx-scanner"
         }
 
 	

@@ -26,6 +26,12 @@ node {
         checkout scm
     }
 	
+	 stage('Install NPM Modules') {
+           // cleanWs()
+           // test if sfdx is available and if not, install it.
+            //echo "Installing sfdx-cli"
+		  //  bat "\"C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\npm.exe "install --global sfdx-scanner" 
+        }
 
 	
 //	Authorizing SFDX for the environment	

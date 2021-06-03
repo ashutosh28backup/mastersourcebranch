@@ -27,16 +27,10 @@ node {
         checkout scm
     }
 	
-	// stage('Install NPM Modules') {
-           cleanWs()
-           // test if sfdx is available and if not, install it.
-            //echo "Installing sfdx-cli"
-		//    bat "\"C:\\Program Files (x86)\\nodejs\\npm\" install --global sfdx-scanner"
-      //  }
-       stage('PMD') {
-           cleanWs()
-           pmdrun = bat returnStatus: true, script: "\"${pmd}\" -d "force-app\main\default\classes" -f html -R "category/apex/design.xml" -reportfile "force-app\output.html""
-        }
+    stage('PMD') {
+  	//pmdrun = bat returnStatus: true, script: "\"${pmd}\" -d "force-app\main\default\classes" -f html -R "category/apex/design.xml" -reportfile "force-app\output.html""
+    pmdrun = bat returnStatus: true, script: "\"${pmd}\" -d "\"C:\\Users\\Administrator\\Downloads\\mastersourcebranch-master\\mastersourcebranch-master\\force-app\\main\\default\\classes"\" -f html -R "category/apex/design.xml" -reportfile "\\"force-app\\output.html"\""    
+    }
 	
 //	Authorizing SFDX for the environment	
 	withCredentials([file(credentialsId: JWT_KEY_CRED_ID, variable: 'jwt_key_file')]) {

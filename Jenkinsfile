@@ -10,6 +10,7 @@ node {
     def SFDC_HOST = env.SFDC_HOST_DH
     def JWT_KEY_CRED_ID = env.JWT_CRED_ID_DH
     def CONNECTED_APP_CONSUMER_KEY=env.CONNECTED_APP_CONSUMER_KEY_DH
+    def pmd=env.pmd
 	
 	
     println 'KEY IS' 
@@ -31,7 +32,7 @@ node {
            // test if sfdx is available and if not, install it.
             //echo "Installing sfdx-cli"
 		//    bat "\"C:\\Program Files (x86)\\nodejs\\npm\" install --global sfdx-scanner"
-        }
+      //  }
        stage('PMD') {
            cleanWs()
            pmdrun = bat returnStatus: true, script: "\"${pmd}\" -d "force-app\main\default\classes" -f html -R "category/apex/design.xml" -reportfile "force-app\output.html""

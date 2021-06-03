@@ -19,6 +19,7 @@ node {
     println SFDC_HOST
     println CONNECTED_APP_CONSUMER_KEY
     def toolbelt = tool 'toolbelt'
+    println 'pmd' 	
 
     cleanWs()
 	

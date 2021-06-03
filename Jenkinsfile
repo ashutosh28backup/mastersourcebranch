@@ -29,7 +29,7 @@ node {
 	
     stage('PMD') {
   	//pmdrun = bat returnStatus: true, script: "\"${pmd}\" -d "force-app\main\default\classes" -f html -R "category/apex/design.xml" -reportfile "force-app\output.html""
-    pmdrun = bat returnStatus: true, script: "\"${pmd}\" -d "\"C:\\Users\\Administrator\\Downloads\\mastersourcebranch-master\\mastersourcebranch-master\\force-app\\main\\default\\classes"\" -f html -R "category/apex/design.xml" -reportfile "\\"force-app\\output.html"\""    
+    pmdrun = bat returnStatus: true, script: "\"${pmd}\" -d "C:\\Users\\Administrator\\Downloads\\mastersourcebranch-master\\mastersourcebranch-master\\force-app\\main\\default\\classes" -f html -R "category/apex/design.xml" -reportfile "\\"force-app\\output.html"\""    
     }
 	
 //	Authorizing SFDX for the environment	
@@ -43,12 +43,12 @@ node {
 	}
 
 	//	Static code analysis		
-	stage('Static Code Analysis') {
-	SCA=bat returnStatus: true, script: "\"${toolbelt}\" scanner:run --target=.\\force-app --outfile=sfdxscanner1.html --format=html"
-	if (SCA != 0) { error 'Issues found in code scan' }
-	else{ println ('No major issues found in code scan') }
+	//stage('Static Code Analysis') {
+	//SCA=bat returnStatus: true, script: "\"${toolbelt}\" scanner:run --target=.\\force-app --outfile=sfdxscanner1.html --format=html"
+	//if (SCA != 0) { error 'Issues found in code scan' }
+	//else{ println ('No major issues found in code scan') }
 	
-	}
+	//}
 	
 	
 		

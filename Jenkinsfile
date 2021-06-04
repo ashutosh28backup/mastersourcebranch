@@ -23,6 +23,12 @@ node {
     def pmd = tool 'pmd'
 	println pmd
 
+//// test
+	
+	println(%date%%time%)	
+// test ends
+	
+	
     cleanWs()
 	
     stage('checkout source') {

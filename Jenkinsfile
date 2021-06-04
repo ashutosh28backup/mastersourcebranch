@@ -24,9 +24,9 @@ node {
 	println pmd
 
 //// test
-	
-	timestamp= bat "echo %date%%time%"
-	println (timestamp)
+	Date date= new Date();
+	//timestamp= bat "echo %date%%time%"
+	println (date)
 // test ends
 	
 	

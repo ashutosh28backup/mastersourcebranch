@@ -20,7 +20,7 @@ node {
     println CONNECTED_APP_CONSUMER_KEY
     def toolbelt = tool 'toolbelt'
     println toolbelt
-    def pmd = tool 'pmd1'
+    def pmd = tool 'pmd'
 	println pmd
 
     cleanWs()

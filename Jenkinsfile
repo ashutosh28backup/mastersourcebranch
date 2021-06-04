@@ -27,7 +27,7 @@ node {
 	Date date= new Date();
 	//timestamp= bat "echo %date%%time%"
 	def timestamp=date.getTime()
-	def filename = "\"C:\\Users\\Administrator\\Downloads\\mastersourcebranch-master\\mastersourcebranch-master\\force-app\\main\\pmdreport.html\"
+	def filename = "\"C:\\Users\\Administrator\\Downloads\\mastersourcebranch-master\\mastersourcebranch-master\\force-app\\main\\pmdreport.html\""
 	println(filename)
 	println (timestamp)
 // test ends

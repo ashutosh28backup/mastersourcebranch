@@ -26,7 +26,7 @@ node {
 //// test
 	Date date= new Date();
 	//timestamp= bat "echo %date%%time%"
-	println (date)
+	println (date.getTime())
 // test ends
 	
 	

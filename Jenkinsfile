@@ -10,7 +10,7 @@ node {
     def SFDC_HOST = env.SFDC_HOST_DH
     def JWT_KEY_CRED_ID = env.JWT_CRED_ID_DH
     def CONNECTED_APP_CONSUMER_KEY=env.CONNECTED_APP_CONSUMER_KEY_DH
-    def pmd1=env.pmd
+    //def pmd1=env.pmd
 	
 	
     println 'KEY IS' 
@@ -19,8 +19,9 @@ node {
     println SFDC_HOST
     println CONNECTED_APP_CONSUMER_KEY
     def toolbelt = tool 'toolbelt'
-    println pmd1
-    def pmd=tool 'pmd1'
+    println toolbelt
+    def pmd = tool 'pmd1'
+	println pmd
 
     cleanWs()
 	

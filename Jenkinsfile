@@ -25,7 +25,8 @@ node {
 
 //// test
 	
-	println(%date%%time%)	
+	timestamp= bat "echo %date%%time%"
+	printlin (timestamp)
 // test ends
 	
 	
